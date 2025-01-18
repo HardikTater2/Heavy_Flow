@@ -1,0 +1,94 @@
+/* Custom Scrollbar with Purple Theme */
+:root {
+  --sb-track-color: #1F2937;    /* Dark gray background */
+  --sb-thumb-color: #9333EA;    /* Purple thumb */
+  --sb-size: 9px;
+}
+
+body::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track,
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;  /* Slightly darker purple on hover */
+}
+
+/* Firefox support */
+@supports not selector(::-webkit-scrollbar) {
+  body,
+  .custom-scrollbar {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    scrollbar-width: thin;
+  }
+}
+
+/* Calendar Styles */
+.custom-calendar {
+  --fc-border-color: rgba(75, 85, 99, 0.5);
+  --fc-button-bg-color: #9333EA;
+  --fc-button-border-color: #9333EA;
+  --fc-button-hover-bg-color: #7928CA;
+  --fc-button-hover-border-color: #7928CA;
+  --fc-button-active-bg-color: #6B21A8;
+  --fc-button-active-border-color: #6B21A8;
+  --fc-today-bg-color: rgba(147, 51, 234, 0.1);
+  --fc-neutral-bg-color: transparent;
+  --fc-page-bg-color: transparent;
+  font-size: 0.8rem !important;
+  height: 100% !important;
+  overflow: auto !important;
+}
+
+.custom-calendar .fc-theme-standard td, 
+.custom-calendar .fc-theme-standard th {
+  border-color: var(--fc-border-color);
+  padding: 2px;
+}
+
+.custom-calendar .fc-day-today {
+  background: var(--fc-today-bg-color) !important;
+}
+
+.custom-calendar .fc-button {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  padding: 0.2em 0.4em !important;
+}
+
+.custom-calendar .fc-toolbar-title {
+  font-size: 1rem;
+}
+
+.custom-calendar .fc-daygrid-day-number,
+.custom-calendar .fc-col-header-cell-cushion {
+  color: white;
+  font-size: 0.75rem;
+}
+
+.custom-calendar .fc {
+  height: 100% !important;
+}
+
+.custom-calendar .fc-scroller {
+  overflow: hidden !important;
+}
+
+.custom-calendar .fc-header-toolbar {
+  margin-bottom: 0.5em !important;
+  font-size: 0.9em !important;
+} 
