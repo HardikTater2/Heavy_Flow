@@ -38,21 +38,12 @@ export default function Dashboard() {
             className="bg-gray-800 p-6 rounded-lg shadow-lg"
           >
             <h2 className="text-2xl font-bold mb-4">Trend Diversity</h2>
-            <div className="bg-gray-700 h-64 rounded-lg mb-4">
-              <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-                <GoogleMap
-                  mapContainerStyle={mapContainerStyle}
-                  center={center}
-                  zoom={2}
-                  options={{
-                    styles: [
-                      { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-                      { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
-                      { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
-                    ],
-                  }}
-                />
-              </LoadScript>
+            <div className="bg-gray-700 h-64 rounded-lg mb-4 overflow-hidden">
+              <img 
+                src="/dashboard/world.png" 
+                alt="World Map"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
           <motion.div
@@ -61,10 +52,8 @@ export default function Dashboard() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <h2 className="text-2xl font-bold mb-4">Upcoming Events</h2>
-            <div className="bg-gray-700 rounded-lg">
-              <EventCalendar />
-            </div>
+            <h2 className="text-2xl font-bold mb-4">Content Performance</h2>
+            <p className="text-gray-300">Performance chart coming soon!</p>
           </motion.div>
         </div>
         <motion.div
