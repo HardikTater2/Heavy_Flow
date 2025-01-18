@@ -52,8 +52,10 @@ export default function Dashboard() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="bg-gray-800 p-6 rounded-lg shadow-lg"
           >
-            <h2 className="text-2xl font-bold mb-4">Content Performance</h2>
-            <p className="text-gray-300">Performance chart coming soon!</p>
+            <h2 className="text-2xl font-bold mb-4">Content Calendar</h2>
+            <div className="bg-gray-700 rounded-lg overflow-hidden">
+              <EventCalendar />
+            </div>
           </motion.div>
         </div>
         <motion.div
